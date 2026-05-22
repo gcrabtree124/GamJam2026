@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639149295400528751
-    m_Hash: 2438020503
+      ticks: 639149358122687338
+    m_Hash: 894742124
   m_LockFileStatus:
     m_FilePath: C:/Users/why98/Desktop/GamJam2026/GameJam2026/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639149295943543472
-    m_Hash: 1354096815
+      ticks: 639149358122687338
+    m_Hash: 3035263049
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
