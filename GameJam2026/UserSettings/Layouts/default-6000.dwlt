@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1280
     height: 630.3334
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -613,12 +613,12 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 60}
     m_SelectedIDs:
-    - m_Data: 61192
+    - m_Data: 45750
     m_LastClickedID:
-      m_Data: 61192
+      m_Data: 45750
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 61192
+    - m_Data: 45750
     - m_Data: 1000000000
     - m_Data: 2147483647
     m_RenameOverlay:
@@ -653,7 +653,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 61192
+    - m_Data: 45750
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -681,8 +681,8 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: -44630
-    m_LastClickedInstanceID: -44630
+    - m_Data: 45320
+    m_LastClickedInstanceID: 45320
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: []
     m_RenameOverlay:
@@ -807,12 +807,11 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs:
-      - m_Data: -44630
+      - m_Data: 45320
       m_LastClickedID:
-        m_Data: -44630
+        m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -43564
-      - m_Data: 61144
+      - m_Data: -1292
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
