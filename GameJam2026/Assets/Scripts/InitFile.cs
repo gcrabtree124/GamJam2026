@@ -38,7 +38,7 @@ namespace ReadingInAFile
         #endregion
 
         #region Constants/Hardcoded Values
-        const string cstrFileLocation = @"C:\Users\why98\Documents\Talking about nothing.txt";
+        const string cstrFileLocation = @"Assets/Text Files/DialogueFileExample.txt";
         const string cstrFileDelimiter = "|";
         const string cstrFileIgnoreLineSymbol = "//";
         const string cstrFileNewLineSymbol = "~";
@@ -49,8 +49,9 @@ namespace ReadingInAFile
         #endregion
 
         #region Execute
-        public void Main(string[] args)
+        public void Main(out ArrayList AllDialogues)
         {
+            AllDialogues = new();
             if (File.Exists(cstrFileLocation))
             {
                 // Store each line in array of strings
@@ -112,18 +113,6 @@ namespace ReadingInAFile
 
                 AllDialogues.Add(new DialogueNode(strRowID, strRowPrompt, arrDialogueOptions));
             }
-        }
-
-        public DialogueNode FindDialogueNodeByNodeID(string pstrNodeID)
-        {
-            foreach (DialogueNode convertedRow in AllDialogues)
-            {
-                if (convertedRow.NodeID.Equals(pstrNodeID))
-                {
-                    return convertedRow;
-                }
-            }
-            return null;
         }
         #endregion
     }

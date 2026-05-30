@@ -561,7 +561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &646103673
 RectTransform:
   m_ObjectHideFlags: 0
@@ -864,30 +864,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f2399ae6c48c34f8312967a3d02e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogConversation
-  InputActions: {fileID: 0}
-  lines: []
-  currentLine:
-    name: 
-    img: {fileID: 0}
-    options: []
-  dialogueOption1:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 127dc325-592f-4a00-ac1a-4ceadbbdfad3
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  dialogueOption2:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: d6bff660-717e-4e71-98ff-2a72449f5201
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
 --- !u!4 &879245166
 Transform:
   m_ObjectHideFlags: 0
@@ -1013,7 +989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1301604906
 RectTransform:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using static ReadingInAFile.InitFile;
+using System.Collections;
 
 public class NewDialogueEngine : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class NewDialogueEngine : MonoBehaviour
     [SerializeField] private Image CurrentImage;
 
     //class that reads in the conversation file and the object it translates it into
-    private InitFile InitFile;
+    private ArrayList allDialogues;
     private InitFile.DialogueNode currentDialogueNode;
 
 
@@ -45,7 +46,10 @@ public class NewDialogueEngine : MonoBehaviour
         InputActions.FindActionMap("Dialogue").Enable();
 
         //Read in the conversations text file and convert it into an arraylist of DialogueNode objects
-        InitFile.Invoke("Main", 0);
+
+        InitFile InitFile = new();
+        InitFile.Main(out allDialogues);
+        strRowID = "";
     }
 
     private void OnDisable()
@@ -147,7 +151,7 @@ public class NewDialogueEngine : MonoBehaviour
     {
         if (currentDialogueNode.ResponseOptions.Count >= pintReponseSelected)
         {
-            ResponseOption respSelected = (ResponseOption)currentDialogueNode.ResponseOptions[pintReponseSelected-1];
+            ResponseOption respSelected = (ResponseOption)currentDialogueNode.ResponseOptions[pintReponseSelected - 1];
             strRowID = respSelected.nextNodeID;
             UpdateCurrentLine();
         }
@@ -170,7 +174,7 @@ public class NewDialogueEngine : MonoBehaviour
 
     private void UpdateCurrentLine()
     {
-        currentDialogueNode = InitFile.FindDialogueNodeByNodeID(strRowID);
+        currentDialogueNode = FindDialogueNodeByNodeID(strRowID);
         if (currentDialogueNode == null) //prompt with that RowID not found
         {
             dialogueEngine.SetActive(false);
@@ -183,7 +187,7 @@ public class NewDialogueEngine : MonoBehaviour
         for (int i = 0; i < currentDialogueNode.ResponseOptions.Count; i++)
         {
             ResponseOption respOption = (ResponseOption)currentDialogueNode.ResponseOptions[i];
-            strResponses += $"{i+1}: {respOption.AnswerText}\n";
+            strResponses += $"{i + 1}: {respOption.AnswerText}\n";
         }
         ResponseOptionsText.text = strResponses;
 
@@ -193,5 +197,17 @@ public class NewDialogueEngine : MonoBehaviour
         //this doesnt work but the idea is there will be an image for each frame and the title of 
         //the image in the asset folder is the same as the strRowID for the prompt
         //so we find the image that matches the prompt and update the current image to that
+    }
+
+    public DialogueNode FindDialogueNodeByNodeID(string pstrNodeID)
+    {
+        foreach (DialogueNode convertedRow in allDialogues)
+        {
+            if (convertedRow.NodeID.Equals(pstrNodeID))
+            {
+                return convertedRow;
+            }
+        }
+        return null;
     }
 }
