@@ -1,0 +1,16 @@
+How it works:
+- each row needs at least a row id and a prompt, you can provide as many options as you want for the answer
+       - ok not infinite, limited by how small you are ok with the text getting and by how many input options you configure to listen for
+- to convey that a prompt is the end of a dialogue tree, don't provide any response options for the row
+- to convey that an option represents the end of a dialogue tree, don't provide a next row id for the option
+- a response option's next row id must actually be the row id of an existing row or that option will be treated as if it has no next row id provided
+- the row id has to be unique and the row id that starts a dialogue will be hardcoded in the unity game
+- multiple options can point to the same next row id(like john200 in the example file)
+
+Formatting:
+- the row id doesn't have to be in order or even a number, but it does need to be unique
+- lines can end with a | or without one
+- spaces are ignored around the |
+- if you want a line break, just put the tilde character(~) where you would usually press enter, the code will translate that
+- you can have blank lines for organization
+- if you want to have a line that doesn't translate into a dialogue prompt, start the line with the characters: // 

@@ -1,0 +1,19 @@
+//Row ID | Prompt | Answer 1 | Row Id Of Next Prompt If Answer 1 was selected | Answer 2 | Row Id Of Next Prompt If Answer 2 was selected...
+
+//john dialogue
+john000|Hey, welcome to some dialogue. What's your favorite color? | Blue | john100 | Red | john200 | Yellow | john300
+john100|No way! I love Blue too!! Whats you favorite shape? | Circle | john110 | Octogon | john120
+john200| Well to each their own. Red is too much in my opinion | ok rude | john210 | whatever | john210
+john300| That's a solid choice, yellow is my grandma's favorite color. | It was my grandma's favorite too! | john310 | Are you calling me dated?!?|john320
+john110|Nice choice, you can't poke yourself with a circle| weird comment, bye|| I am accident prone :// | john112
+john120|ok, thats kinda specific.~ Big fan of stop signs are you?|
+john210|I'm just saying I don't love red, no need to get short with me
+john310| Was?? RIP
+john320| No ofc not! I was just saying yellow is a nice mellow color, respect|
+john112 | samesies
+
+
+
+//jane dialogue
+jane000|Hi my name is Jane | cool... | jane100 | Hey! I also have a name!! | jane100 | Anywayssss | jane100
+jane100 | ok rude
