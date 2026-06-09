@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     ///Check to see if you're touching the ground while jumping
     public LayerMask groundMask;
     private bool isGrounded;
+    private bool isJumping;
 
 
     private bool altTurnAndMove;
@@ -81,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
         //Read the value off the input and assign it to the groundMove vector2
         groundMoveValue = moveInput.ReadValue<Vector2>();//between -1 and  +1
         turnMoveValue = turnInput.ReadValue<Vector2>();//same range, but for left and right
+        isJumping = jumpInput.IsPressed();
 
     }
 
@@ -103,6 +105,11 @@ public class PlayerMovement : MonoBehaviour
             //this is for turning
         }
         altTurnAndMove = !altTurnAndMove;
+        if (isJumping)//&& isGrounded
+        {
+            rb.AddRelativeForce(0, jumpForce, 0);
+            isJumping = false;
+        }
 
     }
 
