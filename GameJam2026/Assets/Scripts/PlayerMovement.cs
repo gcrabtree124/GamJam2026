@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
     ///Check to see if you're touching the ground while jumping
     public LayerMask groundMask;
-    [SerializeField] private bool isGrounded;
+    private bool isGrounded;
     private bool isJumping;
 
 
@@ -105,34 +105,12 @@ public class PlayerMovement : MonoBehaviour
             //this is for turning
         }
         altTurnAndMove = !altTurnAndMove;
-        if (isJumping && isGrounded)
+        if (isJumping)//&& isGrounded
         {
             rb.AddRelativeForce(0, jumpForce, 0);
             isJumping = false;
         }
 
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        //check if the thing we collided with is on the ground layer
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
-        {
-            isGrounded = true;
-        }
-        
-        
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        //check if the thing we stopped colliding with is on the ground layer
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
-        {
-            isGrounded = false;
-        }
-        
-        
     }
 
 }
